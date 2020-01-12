@@ -5,10 +5,14 @@ const MyPosts = () => {
     return (
         <div>
             <h1>My post</h1>
-            
             <textarea></textarea>
             <button> Add post </button>
-            <Post />
+            <Post
+                message="Hi, how are u?"
+            />
+            <Post
+                message="It's my first post"
+            />
         </div>
     );
 }
