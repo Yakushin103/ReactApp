@@ -10,9 +10,10 @@ const MyPosts = ({ postData }) => {
             <button> Add post </button>
             {
                 postData && 
-                postData.map(item => (
+                postData.map((item, i) => (
                     <Post
                         message={item.message}
+                        id={i}
                     />
                 ))
             }

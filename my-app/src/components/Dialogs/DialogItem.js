@@ -5,7 +5,7 @@ const DialogItem = ({name, id}) => {
     let path = `/dialogs/${id}`
 
     return (
-        <div className="item">
+        <div className="item" key={id}>
             <NavLink to={path}>{name}</NavLink>
         </div>
     )
