@@ -1,14 +1,7 @@
 import React from 'react';
 import Post from './Post';
 
-const MyPosts = () => {
-
-    let postData = [
-        { id: 1, message: 'Hi, how are u?'},
-        { id: 2, message: 'Its my first post'},
-        { id: 3, message: 'How its work'},
-        { id: 4, message: 'Bla bla bla'}
-    ];
+const MyPosts = ({ postData }) => {
 
     return (
         <div className="content-post">
