@@ -3,7 +3,7 @@ import Post from './Post';
 
 const MyPosts = () => {
     return (
-        <div>
+        <div className="content-post">
             <h1>My post</h1>
             <textarea></textarea>
             <button> Add post </button>
