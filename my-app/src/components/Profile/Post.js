@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Post = (props) => {
-    const message = props.message;
+const Post = ({message}) => {
 
     return (
         <div className="post">
