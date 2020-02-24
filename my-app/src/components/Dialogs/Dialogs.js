@@ -3,14 +3,14 @@ import './Dialogs.css';
 import DialogItem from './DialogItem';
 import Message from './Message';
 
-const Dialogs = ({ dialogsData, messageData }) => {
+const Dialogs = ({ state }) => {
 
     return (
         <div className="dialogs">
             <div className="dialog-items">
                 {
-                    dialogsData &&
-                    dialogsData.map(item => (
+                    state.dialogsData &&
+                    state.dialogsData.map(item => (
                         <DialogItem
                             name={item.name}
                             id={item.id}
@@ -20,8 +20,8 @@ const Dialogs = ({ dialogsData, messageData }) => {
             </div>
             <div className="message-items">
                 {
-                    messageData &&
-                    messageData.map(item => (
+                    state.messageData &&
+                    state.messageData.map(item => (
                         <Message 
                             message={item.message}
                         />

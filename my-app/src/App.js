@@ -6,21 +6,20 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-const App = ({ dialogsData, messageData, postData }) => {
+const App = ({ state }) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navbar />
         <Route path="/dialogs" render={() => 
-          <Dialogs 
-            dialogsData={dialogsData}
-            messageData={messageData} 
+          <Dialogs
+          state={state.profilePage}
           /> } 
         />
         <Route path="/profile" render={() => 
           <Profile
-          postData={postData}
+          state={state.postPage}
           />}
          />
       </div>
