@@ -6,7 +6,7 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-const App = ({ state, addPost, updatePostText }) => {
+const App = ({ store, addPost, updatePostText }) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -14,12 +14,12 @@ const App = ({ state, addPost, updatePostText }) => {
         <Navbar />
         <Route path="/dialogs" render={() => 
           <Dialogs
-          state={state.profilePage}
+          state={store.profilePage}
           /> } 
         />
         <Route path="/profile" render={() => 
           <Profile
-          state={state.postPage}
+          state={store.postPage}
           addPost={addPost}
           updateText={updatePostText}
           />}
