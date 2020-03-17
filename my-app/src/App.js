@@ -6,7 +6,7 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-const App = ({ state }) => {
+const App = ({ state, addPost }) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -20,6 +20,7 @@ const App = ({ state }) => {
         <Route path="/profile" render={() => 
           <Profile
           state={state.postPage}
+          addPost={addPost}
           />}
          />
       </div>

@@ -3,7 +3,7 @@ import './Profile.css';
 import MyPosts from './MyPosts';
 import MyAvatar from './MyAvatar';
 
-const Profile = ({ state }) => {
+const Profile = ({ state, addPost }) => {
     return (
         <div className="content">
             <MyAvatar
@@ -11,6 +11,7 @@ const Profile = ({ state }) => {
             />
             <MyPosts
                 postData={state.postData}
+                addPost={addPost}
             />
         </div>
     );

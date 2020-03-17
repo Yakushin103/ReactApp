@@ -1,12 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import App from './App';
 import state from './mockData/state';
-import './index.css';
+import { rerenderEntireTree } from './render';
+// import './index.css';
 
-ReactDOM.render(
-  <App 
-  state={state}
-  />,
-  document.getElementById('root')
-);
+rerenderEntireTree(state);
+
+

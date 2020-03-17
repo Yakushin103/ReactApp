@@ -5,9 +5,17 @@ import Message from './Message';
 
 const Dialogs = ({ state }) => {
 
+    const newMessageElement = React.createRef()
+
+    const addMessage = () => {
+        let message = newMessageElement.current.value
+        alert(message)
+    }
+
     return (
         <div className="dialogs">
-            <div className="dialog-items">
+            <div className="dialogs-row">
+                <div className="dialog-items">
                 {
                     state.dialogsData &&
                     state.dialogsData.map(item => (
@@ -17,8 +25,8 @@ const Dialogs = ({ state }) => {
                         />
                     ))
                 }
-            </div>
-            <div className="message-items">
+                </div>
+                <div className="message-items">
                 {
                     state.messageData &&
                     state.messageData.map(item => (
@@ -27,8 +35,14 @@ const Dialogs = ({ state }) => {
                         />
                     ))
                 }
+                </div>
             </div>
-
+            <div className="dialogs-row">
+                <div className="dialog-add">
+                    <textarea ref={newMessageElement} ></textarea>
+                    <button disabled={false} onClick={addMessage} > Add post </button>
+                </div>
+            </div>
         </div>
     );
 }
